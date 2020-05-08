@@ -6,9 +6,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     /*[SerializeField]*/ private Animator animator;
-    [SerializeField] private BoxCollider feetCollider;
     private CharacterController cc;
-    private bool isGrounded;
+    [SerializeField] [Range(3, 10)] private float gravityValue = 7;
     float gravity;
 
     Vector2 direction = new Vector2();
@@ -31,28 +30,27 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("DirY", direction.y);
         animator.SetBool("Moving", direction.sqrMagnitude > 0);
 
-        if (isGrounded)
+        if (cc.isGrounded)
         {
             gravity = 0;
+           
         }
         else
         {
-            gravity = -9.82f * Time.deltaTime;
+            gravity = -gravityValue * Time.deltaTime;
+            Vector3 gravityMove = new Vector3(0, gravity, 0);
+            cc.Move(gravityMove);
+
         }
 
-
-
-        if (direction.sqrMagnitude > 0)
+        if (direction.sqrMagnitude > 0 || !cc.isGrounded)
         {
-            Vector3 movement = new Vector3(direction.x, gravity, direction.y);
+            Vector3 movement = new Vector3(direction.x, 0, direction.y);
             cc.Move(movement * 2 * Time.deltaTime);
         }
 
-        CheckIfGrounded();
+     
     }
 
-    private bool CheckIfGrounded()
-    {
-        throw new NotImplementedException();
-    }
+
 }
