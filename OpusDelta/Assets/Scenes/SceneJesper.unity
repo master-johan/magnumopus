@@ -238,6 +238,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7224726935508800316, guid: f74aa74523e5a824cb85ab4a52d67a82,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7224726935508800317, guid: f74aa74523e5a824cb85ab4a52d67a82,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -332,6 +337,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58feb90d9183fc24c8418e5696bf23a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  radius: 3
+  item: {fileID: 11400000, guid: 07c462c282bc48c428c34caab1eecb45, type: 2}
 --- !u!65 &939227691
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -400,7 +407,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 939227689}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.16, y: 1.35, z: 0.85}
+  m_LocalPosition: {x: -5.16, y: 1.02, z: 0.85}
   m_LocalScale: {x: 0.44951, y: 0.44951, z: 0.44951}
   m_Children: []
   m_Father: {fileID: 0}
@@ -629,7 +636,7 @@ GameObject:
   - component: {fileID: 1402803562}
   - component: {fileID: 1402803561}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Interactable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -656,7 +663,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1402803560}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -716,7 +723,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1402803560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.41, y: 1.73, z: 6.17}
+  m_LocalPosition: {x: 6.41, y: 1.05, z: 6.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
