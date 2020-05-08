@@ -5,19 +5,27 @@ using System.Collections.Generic;
 public class Interactable : MonoBehaviour
 {
     public float radius = 3f;
+
     bool isFocused = false;
 
     Transform player;
 
+    bool hasInteracted = false;
+
+    public virtual void Interact()
+    {
+        //This methos is meant to be overwritten
+    }
 
     void Update()
     {
-        if (isFocused)
+        if (isFocused && !hasInteracted)
         {
             float distance = Vector3.Distance(player.position, transform.position);
             if (distance <= radius)
             {
-                Debug.Log("INTERACT");
+                Interact();
+                hasInteracted = true;
             }
         }
     }
@@ -25,12 +33,14 @@ public class Interactable : MonoBehaviour
     {
         isFocused = true;
         player = playerTransform;
+        hasInteracted = false;
     }
 
     public void OnDefocused()
     {
         isFocused = false;
         player = null;
+        hasInteracted = false;
     }
 
     void OnDrawGizmosSelected()
