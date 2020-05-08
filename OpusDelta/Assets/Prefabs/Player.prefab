@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7224726935508800318}
   - component: {fileID: 7224726935508800319}
   - component: {fileID: 7224726935508800316}
+  - component: {fileID: 90538226878525174}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -46,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85dd4fa2896a26e4db706c0a5314a938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  feetCollider: {fileID: 90538226878525174}
 --- !u!95 &7224726935508800319
 Animator:
   serializedVersion: 3
@@ -82,7 +84,20 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 2.71, z: 0}
+--- !u!65 &90538226878525174
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7224726935508800320}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.358801, y: 0.064380884, z: 0.36496305}
+  m_Center: {x: 0.008112662, y: 1.7335716, z: 0.019999996}
 --- !u!1001 &7224726935663709242
 PrefabInstance:
   m_ObjectHideFlags: 0
