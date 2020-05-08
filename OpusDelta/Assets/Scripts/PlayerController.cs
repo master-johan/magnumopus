@@ -20,9 +20,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-
+        
         direction.x = Input.GetAxis("Horizontal");
         direction.y = Input.GetAxis("Vertical");
+
+       
 
         direction.Normalize();
 
@@ -49,8 +51,17 @@ public class PlayerController : MonoBehaviour
             cc.Move(movement * 2 * Time.deltaTime);
         }
 
-     
+        if (Input.GetButtonDown("Fire1") /*&& cc.isGrounded*/)
+        {
+            Debug.Log("Attacking");
+            Attack();
+        }
+
+
     }
 
-
+    private void Attack()
+    {
+        animator.SetTrigger("Attack");
+    }
 }
