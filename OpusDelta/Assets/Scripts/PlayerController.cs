@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
             cc.Move(movement * 2 * Time.deltaTime);
         }
 
-        if (Input.GetButtonDown("Fire1") /*&& cc.isGrounded*/)
+        if (Input.GetButtonDown("Fire1"))
         {
             Debug.Log("Attacking");
             Attack();
