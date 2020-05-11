@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de719b70ba8d1d3448d2c9652a7c988f, type: 3}
-  m_Name: asd
+  m_Name: Shield
   m_EditorClassIdentifier: 
-  name: kub
-  icon: {fileID: 0}
+  name: Shield
+  icon: {fileID: 21300000, guid: ad7d27f32bb99cc4cbbb175e0c0a20f1, type: 3}
   isDefault: 0
