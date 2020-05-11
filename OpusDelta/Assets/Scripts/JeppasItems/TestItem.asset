@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: TestItem
   m_EditorClassIdentifier: 
   name: Sick HP Pot
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 77646127f63be65499c3169bcc49b12e, type: 3}
   isDefault: 0

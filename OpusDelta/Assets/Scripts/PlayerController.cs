@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -9,6 +10,8 @@ public class PlayerController : MonoBehaviour
     private CharacterController cc;
     [SerializeField] [Range(3, 10)] private float gravityValue = 7;
     float gravity;
+
+    public float speed = 2;
 
     Vector2 direction = new Vector2();
     private void Start()
@@ -48,7 +51,7 @@ public class PlayerController : MonoBehaviour
         if (direction.sqrMagnitude > 0 || !cc.isGrounded)
         {
             Vector3 movement = new Vector3(direction.x, 0, direction.y);
-            cc.Move(movement * 2 * Time.deltaTime);
+            cc.Move(movement * speed * Time.deltaTime);
         }
 
         if (Input.GetButtonDown("Fire1") /*&& cc.isGrounded*/)
