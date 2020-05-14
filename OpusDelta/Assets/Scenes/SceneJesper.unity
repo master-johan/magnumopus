@@ -415,6 +415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 1778651623}
+  item: {fileID: 0}
 --- !u!1 &129920041
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,6 +555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 1814903015}
+  item: {fileID: 0}
 --- !u!1 &273088287
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,6 +810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 2072830542}
+  item: {fileID: 0}
 --- !u!114 &772845705 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6547886345557449467, guid: b378b97ab7aa54b4088b34cd040a8053,
@@ -839,6 +842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 1384192989}
+  item: {fileID: 0}
 --- !u!1 &897995197
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,7 +1193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 3
-  item: {fileID: 11400000, guid: 07c462c282bc48c428c34caab1eecb45, type: 2}
+  item: {fileID: 11400000, guid: 8ee09345fce77cb43912e673fb082293, type: 2}
 --- !u!65 &939227691
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1283,6 +1287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 409823707}
+  item: {fileID: 0}
 --- !u!1 &991436662 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6547886344635468028, guid: b378b97ab7aa54b4088b34cd040a8053,
@@ -1302,6 +1307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 934394797}
+  item: {fileID: 0}
 --- !u!1 &1031835754
 GameObject:
   m_ObjectHideFlags: 0
@@ -1760,6 +1766,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1359256501}
   - component: {fileID: 1359256500}
+  - component: {fileID: 1359256502}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1795,6 +1802,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1359256502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359256499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 351909a3c39f3114b91cc86dd6f27a84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1384192989 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6547886345557449467, guid: b378b97ab7aa54b4088b34cd040a8053,
@@ -1826,6 +1845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 472932512}
+  item: {fileID: 0}
 --- !u!1 &1402803560
 GameObject:
   m_ObjectHideFlags: 0
@@ -1927,7 +1947,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1402803560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.41, y: 1.05, z: 6.17}
+  m_LocalPosition: {x: 7.02, y: 1.05, z: 6.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2554,6 +2574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 1637866821}
+  item: {fileID: 0}
 --- !u!114 &1814903015 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6547886345557449467, guid: b378b97ab7aa54b4088b34cd040a8053,
@@ -2585,6 +2606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 772845705}
+  item: {fileID: 0}
 --- !u!1 &1833106952
 GameObject:
   m_ObjectHideFlags: 0
@@ -2696,6 +2718,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focus: {fileID: 0}
+--- !u!114 &1868121867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868121865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be1ded74b57b8c94090a3e648e02b2dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
 --- !u!1 &1893882372 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6547886344635468028, guid: b378b97ab7aa54b4088b34cd040a8053,
@@ -2715,6 +2750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 159267947}
+  item: {fileID: 0}
 --- !u!1001 &1923125035
 PrefabInstance:
   m_ObjectHideFlags: 0
