@@ -5,15 +5,26 @@ using UnityEngine;
 public class Stats : MonoBehaviour
 {
     public float health;
-    // Start is called before the first frame update
+
+    public float maxHealth = 100;
+
     void Start()
     {
-        
+        health = maxHealth;
+        PotionsManager.instance.onPotionsUsed += OnPotionsUsed;
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnPotionsUsed()
     {
-
+        if(health >= 100)
+        {
+            health = 100;
+        }
+        else
+        {
+            health += 5;
+            Debug.Log(health);
+        }
+       
     }
 }

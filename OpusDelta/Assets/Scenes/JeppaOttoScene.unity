@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -322,13 +322,31 @@ MonoBehaviour:
   target: {fileID: 913176289}
   myAnimator: {fileID: 1501670804}
   animatorState: Melee Attack
+--- !u!1 &302278192 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7659032940654696606, guid: ff4b6357cb1306b4097f8d356ba73b04,
+    type: 3}
+  m_PrefabInstance: {fileID: 1211060427}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &302278193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302278192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab8a7f5a9648a845a6def78851ad8e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &446906244
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-103638
+  m_Name: pb_Mesh24376
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -617,7 +635,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79a2d750ab5c042478ed6ef0bd1beb3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 0
+  maxHealth: 100
 --- !u!95 &913176292 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7224726935508800319, guid: f74aa74523e5a824cb85ab4a52d67a82,
@@ -636,7 +655,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-103646
+  m_Name: pb_Mesh24716
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -799,7 +818,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-103610
+  m_Name: pb_Mesh24394
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1343,6 +1362,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9182427766960948794, guid: a2f900b861daeaf43ac6fd3b2910962f,
+        type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9182427767407606903, guid: a2f900b861daeaf43ac6fd3b2910962f,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -1578,6 +1602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 20
+  maxHealth: 100
 --- !u!4 &1504649754 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2524379971677642347, guid: 04f8a4165ba92714f847ff29b24a7425,
@@ -1670,6 +1695,12 @@ PrefabInstance:
       propertyPath: radius
       value: 3.2
       objectReference: {fileID: 0}
+    - target: {fileID: 7494983372995583753, guid: 4d02c4a8099db7e4197ceffdaeca85e7,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 56fb420e9c892d34ba95f299c214ad5f,
+        type: 2}
     - target: {fileID: 7494983372995583754, guid: 4d02c4a8099db7e4197ceffdaeca85e7,
         type: 3}
       propertyPath: m_Name
