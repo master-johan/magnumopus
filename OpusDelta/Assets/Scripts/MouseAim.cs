@@ -28,8 +28,7 @@ public class MouseAim : MonoBehaviour
         transform.position = target.transform.position - (rotation* offset);
 
         transform.LookAt(target.transform);
-
-        target.transform.forward = transform.forward;
+        transform.Rotate(-25, 0, 0);
 
     }
 }
