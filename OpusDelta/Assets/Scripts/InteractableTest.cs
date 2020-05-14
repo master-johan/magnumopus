@@ -19,7 +19,6 @@ public class InteractableTest : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
-            Debug.Log("KLICK");
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 

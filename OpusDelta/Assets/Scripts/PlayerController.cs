@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour
     float gravity;
 
     public float speed = 2;
-    bool isJumping;
 
     Vector2 direction = new Vector2();
     private void Start()
@@ -39,11 +38,10 @@ public class PlayerController : MonoBehaviour
         if (cc.isGrounded)
         {
             gravity = 0;
-
+           
         }
         else
         {
-
             gravity = -gravityValue * Time.deltaTime;
             Vector3 gravityMove = new Vector3(0, gravity, 0);
             cc.Move(gravityMove);
@@ -56,10 +54,9 @@ public class PlayerController : MonoBehaviour
             cc.Move(movement * speed * Time.deltaTime);
         }
 
-
         if (Input.GetButtonDown("Fire1"))
         {
-            //Debug.Log("Attacking");
+            Debug.Log("Attacking");
             Attack();
         }
 
