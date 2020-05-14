@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
         if (direction.sqrMagnitude > 0 || !cc.isGrounded)
         {
-            Vector3 movement = transform.worldToLocalMatrix.MultiplyVector(new Vector3(direction.x, 0, direction.y));
+            Vector3 movement = transform.localToWorldMatrix.MultiplyVector(new Vector3(direction.x, 0, direction.y));
             cc.Move(movement * speed * Time.deltaTime);
         }
 
