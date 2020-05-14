@@ -29,7 +29,10 @@ public class AnimationManager : MonoBehaviour
         {
             cameras[0].SetActive(true);
         }
-
+        //else
+        //{
+        //    Camera.main.enabled = true;
+        //}    
     }
         
     /// <summary>
