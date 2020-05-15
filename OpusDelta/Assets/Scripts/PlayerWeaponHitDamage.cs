@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponHitDamage : MonoBehaviour
+public class PlayerWeaponHitDamage : MonoBehaviour
 {
     public GameObject target;
     public Animator myAnimator;
@@ -10,7 +10,7 @@ public class WeaponHitDamage : MonoBehaviour
     public int layerIndex;
     AnimatorStateInfo state;
     AnimatorClipInfo[] animatorClip;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,34 +22,45 @@ public class WeaponHitDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnTriggerEnter(Collider other)
     {
+        ////Debug.Log(myAnimator.GetLayerName(layerIndex)[0]);
+
+        ////Debug.Log(myAnimator.GetCurrentAnimatorClipInfo(layerIndex)[0].clip.name);
+
+        //if (myAnimator.GetCurrentAnimatorClipInfo(layerIndex)[0].clip)
+        //{
+        //    Debug.Log(myAnimator.GetCurrentAnimatorClipInfo(layerIndex)[0].clip.name);
+        //}
+
+
         state = myAnimator.GetCurrentAnimatorStateInfo(layerIndex);
         animatorClip = myAnimator.GetCurrentAnimatorClipInfo(layerIndex);
 
         float myTime = myAnimator.GetCurrentAnimatorClipInfo(layerIndex)[0].clip.length * state.normalizedTime;
 
-        //Debug.Log(myAnimator.GetCurrentAnimatorClipInfo(layerIndex)[0].clip + target.tag);
+        //float myTime = 0;
+        //myTime += Time.deltaTime;
 
-       
 
-        if(myAnimator.GetCurrentAnimatorStateInfo(layerIndex).IsName(animatorState) && myTime <= 1)
-        {
+        if (myAnimator.GetCurrentAnimatorStateInfo(layerIndex).IsTag(animatorState) && myTime <= 1.5f)
+        {          
             if (other.gameObject == target)
             {
+                Debug.Log(myTime);
                 target.GetComponent<Stats>().health -= 10;
 
-                if(target.GetComponent<Stats>().health <= 0)
+                if (target.GetComponent<Stats>().health <= 0)
                 {
                     target.GetComponent<Stats>().health = 0;
                 }
-                //Debug.Log(target.GetComponent<Stats>().health);
-                //Debug.Log(target.tag);
+
+                //Debug.Log(target.tag + " "+ target.GetComponent<Stats>().health);
 
             }
-        }      
+        }
     }
 }
