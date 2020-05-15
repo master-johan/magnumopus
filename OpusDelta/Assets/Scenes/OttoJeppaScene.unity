@@ -235,6 +235,16 @@ PrefabInstance:
       propertyPath: m_TagString
       value: EnemySimple
       objectReference: {fileID: 0}
+    - target: {fileID: 7081493399155213099, guid: 04f8a4165ba92714f847ff29b24a7425,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 910ddf7ee87b55f4db4abc32cec45f2c, type: 2}
+    - target: {fileID: 7409492805977051307, guid: 04f8a4165ba92714f847ff29b24a7425,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 910ddf7ee87b55f4db4abc32cec45f2c, type: 2}
     - target: {fileID: 8250572041966351928, guid: 04f8a4165ba92714f847ff29b24a7425,
         type: 3}
       propertyPath: m_Constraints
@@ -308,7 +318,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-58162
+  m_Name: pb_Mesh-25228
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -726,7 +736,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-58168
+  m_Name: pb_Mesh-25242
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -889,7 +899,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-58134
+  m_Name: pb_Mesh-25212
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1155,7 +1165,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1495082039}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 187d30ba8b432fc4a80b4a5bae444d76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f9230e7aa94a7f46bf3cb162b659ed6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 554553734}
