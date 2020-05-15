@@ -69,3 +69,5 @@ artifacts
 upm-ci~/*
 com.unity.animation/.npmignore
 OpusDelta/ProjectSettings/QualitySettings.asset
+*.meta
+OpusDelta/ProjectSettings/Packages/com.unity.probuilder/Settings.json
