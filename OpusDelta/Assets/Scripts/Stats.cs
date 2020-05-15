@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class Stats : MonoBehaviour
 {
-    public float maxHealth = 100;
-    public float currentHealth { get; private set; }
-
+    public float health;
+    // Start is called before the first frame update
     void Start()
     {
-        currentHealth = maxHealth;
-        PotionsManager.instance.onPotionsUsed += OnPotionsUsed;
+        
     }
 
-    void OnPotionsUsed()
+    // Update is called once per frame
+    void Update()
     {
-        currentHealth += 5;
-        Debug.Log(currentHealth);
+
     }
 }
