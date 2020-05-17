@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     private CharacterController cc;
     [SerializeField] [Range(3, 10)] private float gravityValue = 7;
     float gravity;
+    [SerializeField] PlayerAttackScript playerWeapon;
+ 
 
     public float speed = 2;
     bool isJumping;
@@ -24,11 +26,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        
         direction.x = Input.GetAxis("Horizontal");
         direction.y = Input.GetAxis("Vertical");
-
-       
+        
 
         direction.Normalize();
 
@@ -59,15 +59,21 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
-            //Debug.Log("Attacking");
             Attack();
         }
+    }
 
-
+    public void StopAttack()
+    {
+      
+            Debug.Log("Attack Stopped");
+            playerWeapon.StopAttack();
+        
     }
 
     private void Attack()
     {
         animator.SetTrigger("Attack");
+        playerWeapon.StartAttack();
     }
 }
