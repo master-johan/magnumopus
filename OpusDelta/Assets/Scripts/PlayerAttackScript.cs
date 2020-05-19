@@ -5,9 +5,8 @@ using UnityEngine;
 public class PlayerAttackScript : MonoBehaviour
 {
     
-    [SerializeField] BoxCollider weaponCollider;
+    BoxCollider weaponCollider;
     List<Collider> hitObjects;
-    public int test;
     public bool activeAttack;
   
     void Start()
@@ -24,11 +23,10 @@ public class PlayerAttackScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-    
 
         if (other.gameObject.tag == "EnemySimple"&& !hitObjects.Contains(other) && activeAttack)
         {
-
+            
             Debug.Log("Enemy Hit" + other.gameObject.tag);
             hitObjects.Add(other);
             
