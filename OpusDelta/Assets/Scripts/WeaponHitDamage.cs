@@ -46,7 +46,7 @@ public class WeaponHitDamage : MonoBehaviour
                 {
                     target.GetComponent<Stats>().health = 0;
                 }
-                //Debug.Log(target.GetComponent<Stats>().health);
+                Debug.Log(target.GetComponent<Stats>().health);
                 //Debug.Log(target.tag);
 
             }

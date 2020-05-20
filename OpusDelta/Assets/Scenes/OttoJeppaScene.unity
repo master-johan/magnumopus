@@ -239,12 +239,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 910ddf7ee87b55f4db4abc32cec45f2c, type: 2}
+      objectReference: {fileID: 2100000, guid: d674c6943da565b44a4f47f44ba6abb1, type: 2}
     - target: {fileID: 7409492805977051307, guid: 04f8a4165ba92714f847ff29b24a7425,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 910ddf7ee87b55f4db4abc32cec45f2c, type: 2}
+      objectReference: {fileID: 2100000, guid: 7c699b7504270e745ad5190a17b630e6, type: 2}
     - target: {fileID: 8250572041966351928, guid: 04f8a4165ba92714f847ff29b24a7425,
         type: 3}
       propertyPath: m_Constraints
@@ -254,6 +254,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mass
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250572041966351928, guid: 04f8a4165ba92714f847ff29b24a7425,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8430177194727919213, guid: 04f8a4165ba92714f847ff29b24a7425,
         type: 3}
@@ -1165,13 +1170,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1495082039}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f9230e7aa94a7f46bf3cb162b659ed6, type: 3}
+  m_Script: {fileID: 11500000, guid: ca2559c2d886e604c8eeab08956790c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 554553734}
-  myAnimator: {fileID: 1952162775}
-  animatorState: Player Melee Attack
-  layerIndex: 1
+  activeAttack: 0
 --- !u!1 &1952162773 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7224726935508800320, guid: f74aa74523e5a824cb85ab4a52d67a82,
@@ -1191,12 +1193,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
---- !u!95 &1952162775 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7224726935508800319, guid: f74aa74523e5a824cb85ab4a52d67a82,
-    type: 3}
-  m_PrefabInstance: {fileID: 7224726935260450815}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3069166252349854795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1406,6 +1402,16 @@ PrefabInstance:
         type: 3}
       propertyPath: gravityValue
       value: 9.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224726935508800318, guid: f74aa74523e5a824cb85ab4a52d67a82,
+        type: 3}
+      propertyPath: playerWeapon
+      value: 
+      objectReference: {fileID: 1495082044}
+    - target: {fileID: 7224726935508800318, guid: f74aa74523e5a824cb85ab4a52d67a82,
+        type: 3}
+      propertyPath: speed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7224726935508800320, guid: f74aa74523e5a824cb85ab4a52d67a82,
         type: 3}
