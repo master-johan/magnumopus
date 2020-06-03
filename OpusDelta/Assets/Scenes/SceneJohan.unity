@@ -219,7 +219,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-6578
+  m_Name: pb_Mesh-51314
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -382,7 +382,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-6564
+  m_Name: pb_Mesh-51312
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -560,7 +560,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 836090220}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7fdd41e2bbbfa34a9e1afdf1edcedcb, type: 3}
+  m_Script: {fileID: 11500000, guid: 571ba58e64238ce43a36ad3a02ea9004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   collider: {fileID: 836090223}
@@ -690,18 +690,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7224726935260450815}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1151301438 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7224726935508800318, guid: f74aa74523e5a824cb85ab4a52d67a82,
-    type: 3}
-  m_PrefabInstance: {fileID: 7224726935260450815}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151301435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85dd4fa2896a26e4db706c0a5314a938, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1151301440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -709,12 +697,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1151301435}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e87a8215cc28444baba8199a4db416e, type: 3}
+  m_Script: {fileID: 11500000, guid: ca2559c2d886e604c8eeab08956790c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pc: {fileID: 1151301438}
+  activeAttack: 0
 --- !u!1001 &1338455874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -830,7 +818,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-6548
+  m_Name: pb_Mesh-51284
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1090,7 +1078,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1495082039}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83d385e01a9b23a4496c7110ff8b4ccf, type: 3}
+  m_Script: {fileID: 11500000, guid: ca2559c2d886e604c8eeab08956790c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   activeAttack: 0
