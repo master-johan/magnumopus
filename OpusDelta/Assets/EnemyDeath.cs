@@ -6,7 +6,6 @@ public class EnemyDeath : MonoBehaviour
 {
     Stats stats;
     private Animator animator;
-    [SerializeField] BoxCollider collider;
     bool once;
     // Start is called before the first frame update
     void Start()
@@ -23,11 +22,6 @@ public class EnemyDeath : MonoBehaviour
             if (!once)
             {
                 animator.SetBool("Dead", true);
-                //float temp = collider.size.y;
-                //collider.size.y(collider.size.z);
-
-                collider.size = new Vector3(collider.size.x, collider.size.z, collider.size.y);
-                collider.center = new Vector3(0, 0.30f, 0);
                 once = true;
                 
             }

@@ -27,13 +27,14 @@ public class PlayerAttackScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.gameObject.tag == "EnemySimple"&& !hitObjects.Contains(other) && activeAttack)
+        if (other.gameObject.tag == "EnemySimple" && !other.isTrigger && !hitObjects.Contains(other) && activeAttack)
         {
             
             //Debug.Log("Enemy Hit" + other.gameObject.tag);
             hitObjects.Add(other);
             other.gameObject.GetComponent<Stats>().health -= wepDamage;
 
+            //Debug.Log(hitObjects.Count);
             Debug.Log(other.gameObject.GetComponent<Stats>().health);
         }
       

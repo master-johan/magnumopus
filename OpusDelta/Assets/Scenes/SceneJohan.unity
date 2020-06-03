@@ -710,6 +710,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8635357306200601738, guid: 04f8a4165ba92714f847ff29b24a7425,
+        type: 3}
+      propertyPath: health
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 1906151565728670487, guid: 04f8a4165ba92714f847ff29b24a7425,
         type: 3}
       propertyPath: m_WarningMessage
