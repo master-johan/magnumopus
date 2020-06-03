@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
 
     GameObject enemy;
     public float speed = 2;
-    bool isBlocked;
+    bool isBlocked, attacking;
     Health health;
 
     Vector2 direction = new Vector2();
@@ -69,8 +69,9 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && !attacking)
         {
+
             Attack();
         }
 
@@ -82,14 +83,14 @@ public class PlayerController : MonoBehaviour
 
     public void StopAttack()
     {
-
+        attacking = false;
         Debug.Log("Attack Stopped");
         playerWeapon.StopAttack();
-
     }
 
     private void Attack()
     {
+        attacking = true;
         animator.SetTrigger("Attack");
         playerWeapon.StartAttack();
     }

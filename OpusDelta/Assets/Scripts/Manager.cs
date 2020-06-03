@@ -12,20 +12,29 @@ public class Manager : MonoBehaviour
     void Start()
     {
         enemyList = new List<GameObject>();
-        enemyList.Add(GameObject.FindGameObjectWithTag("EnemySimple"));
+        enemyList.AddRange(GameObject.FindGameObjectsWithTag("EnemySimple"));
 
         player = GameObject.FindGameObjectWithTag("Player");
+        Cursor.visible = false;
     }
 
     void Update()
     {
 
+
+
         foreach (var e in enemyList)
         {
             if (e.GetComponent<Stats>().health <= 0)
             {
-                StartCoroutine(ChangeToWinScreen());
+                enemyList.Remove(e);
+                break;
             }
+            
+        }
+        if(enemyList.Count <= 0)
+        {
+            StartCoroutine(ChangeToWinScreen());
         }
 
         if(player.GetComponent<Health>().currenthealth <= 0)
@@ -36,13 +45,13 @@ public class Manager : MonoBehaviour
     }
     IEnumerator ChangeToWinScreen()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(5);
 
         SceneManager.LoadScene(2);
     }
     IEnumerator ChangeToLoseScreen()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(5);
 
         SceneManager.LoadScene(3);
     }
