@@ -41,12 +41,19 @@ public class WeaponHitDamage : MonoBehaviour
         {
             if (other.gameObject == target)
             {
-                target.GetComponent<Stats>().health -= wepDamage;
+                target.GetComponent<Health>().ModifyHealth(-wepDamage);
+                //target.GetComponent<Stats>().health -= wepDamage;
 
-                if(target.GetComponent<Stats>().health <= 0)
+                //if(target.GetComponent<Stats>().health <= 0)
+                //{
+                //    target.GetComponent<Stats>().health = 0;
+                //}
+
+                if(target.GetComponent<Health>().currenthealth <= 0)
                 {
-                    target.GetComponent<Stats>().health = 0;
+                    target.GetComponent<Health>().currenthealth = 0;
                 }
+
                 Debug.Log(target.GetComponent<Stats>().health);
                 //Debug.Log(wepDamage);
                 //Debug.Log(target.tag);

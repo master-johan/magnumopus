@@ -7,20 +7,21 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
+
     [SerializeField]
-    private int maxHealth = 100;
-    private int currentHealth;
+    private float maxHealth = 100;
+    public float currenthealth;
 
     public event Action<float> healthPctChanged = delegate { };
     private void OnEnable()
     {
-        currentHealth = maxHealth;
+        currenthealth = maxHealth;
     }
 
-    public void ModifyHealth(int amount)
+    public void ModifyHealth(float amount)
     {
-        currentHealth += amount;
-        float currentHeathPct = (float)currentHealth / (float)maxHealth;
+        currenthealth += amount;
+        float currentHeathPct = currenthealth / maxHealth;
         healthPctChanged(currentHeathPct);
     }
     // Update is called once per frame

@@ -25,7 +25,6 @@ public class EnemyDeath : MonoBehaviour
                 once = true;
                 
             }
-           
         }
     }
 }
