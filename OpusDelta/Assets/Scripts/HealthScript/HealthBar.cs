@@ -13,7 +13,7 @@ public class HealthBar : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        GetComponentInParent<Health>().healthPctChanged += HealthChange;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().healthPctChanged += HealthChange;
     }
     private void HealthChange(float percent)
     {
