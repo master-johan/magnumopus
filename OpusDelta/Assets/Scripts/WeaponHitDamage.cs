@@ -10,13 +10,14 @@ public class WeaponHitDamage : MonoBehaviour
     public int layerIndex;
     AnimatorStateInfo state;
     AnimatorClipInfo[] animatorClip;
-    
+    float wepDamage;
     // Start is called before the first frame update
     void Start()
     {
         //player = GameObject.FindGameObjectWithTag("Player");
 
         //myAnimator = transform.root.GetComponent<Animator>();
+        wepDamage = gameObject.GetComponentInParent<Stats>().wepDamage;
     }
 
     // Update is called once per frame
@@ -40,13 +41,14 @@ public class WeaponHitDamage : MonoBehaviour
         {
             if (other.gameObject == target)
             {
-                target.GetComponent<Stats>().health -= 10;
+                target.GetComponent<Stats>().health -= wepDamage;
 
                 if(target.GetComponent<Stats>().health <= 0)
                 {
                     target.GetComponent<Stats>().health = 0;
                 }
                 Debug.Log(target.GetComponent<Stats>().health);
+                //Debug.Log(wepDamage);
                 //Debug.Log(target.tag);
 
             }

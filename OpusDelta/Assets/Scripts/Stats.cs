@@ -6,18 +6,11 @@ using UnityEngine.SceneManagement;
 public class Stats : MonoBehaviour
 {
     public float health;
+    public float wepDamage;
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(health <= 0)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-    }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerAttackScript : MonoBehaviour
 {
@@ -8,11 +9,13 @@ public class PlayerAttackScript : MonoBehaviour
     BoxCollider weaponCollider;
     List<Collider> hitObjects;
     public bool activeAttack;
+    float wepDamage;
   
     void Start()
     {
         hitObjects = new List<Collider>();
         weaponCollider = GetComponent<BoxCollider>();
+        wepDamage = gameObject.GetComponentInParent<Stats>().wepDamage;
     }
 
   
@@ -27,9 +30,11 @@ public class PlayerAttackScript : MonoBehaviour
         if (other.gameObject.tag == "EnemySimple"&& !hitObjects.Contains(other) && activeAttack)
         {
             
-            Debug.Log("Enemy Hit" + other.gameObject.tag);
+            //Debug.Log("Enemy Hit" + other.gameObject.tag);
             hitObjects.Add(other);
-            
+            other.gameObject.GetComponent<Stats>().health -= wepDamage;
+
+            Debug.Log(other.gameObject.GetComponent<Stats>().health);
         }
       
     }
