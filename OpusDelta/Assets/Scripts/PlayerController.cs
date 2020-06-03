@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     GameObject enemy;
     public float speed = 2;
     bool isBlocked;
-    Stats stats;
+    Health health;
 
     Vector2 direction = new Vector2();
     private void Start()
@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         animator.updateMode = AnimatorUpdateMode.UnscaledTime;
         enemy = GameObject.FindGameObjectWithTag("EnemySimple");
-        stats = gameObject.GetComponent<Stats>();
+        health = gameObject.GetComponent<Health>();
     }
 
     void Update()
@@ -61,7 +61,11 @@ public class PlayerController : MonoBehaviour
         if (direction.sqrMagnitude > 0 || !cc.isGrounded)
         {
             Vector3 movement = transform.localToWorldMatrix.MultiplyVector(new Vector3(direction.x, 0, direction.y));
-            cc.Move(movement * speed * Time.deltaTime);
+            if (health.currenthealth >= 0)
+            {
+                cc.Move(movement * speed * Time.deltaTime);
+            }
+            
         }
 
 
@@ -70,7 +74,7 @@ public class PlayerController : MonoBehaviour
             Attack();
         }
 
-        if (stats.health <= 0)
+        if (health.currenthealth <= 0)
         {
             animator.SetBool("Dead", true);
         }
