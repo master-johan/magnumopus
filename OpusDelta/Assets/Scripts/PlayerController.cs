@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     GameObject enemy;
     public float speed = 2;
     bool isBlocked;
+    Stats stats;
 
     Vector2 direction = new Vector2();
     private void Start()
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         animator.updateMode = AnimatorUpdateMode.UnscaledTime;
         enemy = GameObject.FindGameObjectWithTag("EnemySimple");
+        stats = gameObject.GetComponent<Stats>();
     }
 
     void Update()
@@ -32,7 +34,7 @@ public class PlayerController : MonoBehaviour
         direction.y = Input.GetAxis("Vertical");
         if (isBlocked && direction.y > 0) 
         {
-            Debug.Log("Blocked");
+            //Debug.Log("Blocked");
             direction.y = 0;
         }
 
@@ -66,6 +68,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Attack();
+        }
+
+        if (stats.health <= 0)
+        {
+            animator.SetBool("Dead", true);
         }
     }
 

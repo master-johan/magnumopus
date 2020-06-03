@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7224726935508800318}
   - component: {fileID: 7224726935508800319}
   - component: {fileID: 7224726935508800316}
+  - component: {fileID: 2200784987884557020}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -46,6 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85dd4fa2896a26e4db706c0a5314a938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravityValue: 7
+  playerWeapon: {fileID: 0}
+  speed: 2
 --- !u!95 &7224726935508800319
 Animator:
   serializedVersion: 3
@@ -83,6 +87,20 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 2.66, z: 0}
+--- !u!114 &2200784987884557020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7224726935508800320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79a2d750ab5c042478ed6ef0bd1beb3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  wepDamage: 20
 --- !u!1001 &7224726935663709242
 PrefabInstance:
   m_ObjectHideFlags: 0
