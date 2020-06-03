@@ -12,12 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 7c5a5c18c8ad0854b9ee170d48d7964d
   - enabled: 1
-    path: Assets/Scenes/OttoJeppaScene.unity
-    guid: cd24668b7a0a0fa47b03c3996187002f
+    path: Assets/Scenes/SceneJohan.unity
+    guid: 1f44276e549c4bf4d841729f9b2b95e9
   - enabled: 1
-    path: Assets/Scenes/GameOverMenu.unity
+    path: Assets/Scenes/WinScene.unity
     guid: 52a380d7dd05e0741b1aedf07d6eeb0e
-  - enabled: 0
-    path: Assets/Scenes/MainArena.unity
-    guid: 0c6d1c4a64218994a83f30580afb55b7
+  - enabled: 1
+    path: Assets/Scenes/LoseScene.unity
+    guid: 4d3eb03d7c6b8454db5ec847ed25821a
   m_configObjects: {}
